@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ndVpi"
+version = "1.0.1b3"
+description = "Фоновая оптимизация сети, сканер Wi-Fi, продвинутый трассировщик и сетевой бустер."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "CharmLxt", email = "reception.mailspypi@gmail.com" }]
+keywords = ["wifi", "network", "latency", "optimization", "traceroute", "diagnostics", "charmpkk"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: System :: Networking",
+]
+
+[project.urls]
+Homepage = "https://pypi.org/project/ndVpi/"
+
+[project.optional-dependencies]
+charm = ["CharmPkk>=25.10.26b1"]
+
+[project.scripts]
+ndvpi = "ndvpi.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ndvpi*"]
